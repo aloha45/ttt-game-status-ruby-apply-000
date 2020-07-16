@@ -24,7 +24,6 @@ def won?(board)
     elsif
       win_combination.all? do |win_index|
         board[win_index]=="O"
-      end
       return true
     else
       return false
@@ -42,6 +41,7 @@ def draw?(board)
     true
   else
     false
+  end
 end
 
 def winner(board)
