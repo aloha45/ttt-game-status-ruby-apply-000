@@ -17,18 +17,21 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combination|
-    if win_combination.all? do |win_index|
+    if
+      win_combination.all? do |win_index|
         board[win_index]=="X"
       end
-      return true
+      true
     elsif
       win_combination.all? do |win_index|
         board[win_index]=="O"
-      return true
+      end
+      true
     else
-      return false
+      false
     end
   end
+end
 
 def full?(board)
   board.all? do |index|
@@ -38,6 +41,12 @@ end
 
 def draw?(board)
   if full?(board)==true && won?(board)==nil
+    true
+  end
+end
+
+def over?(board)
+  if won?(board)!=nil || full?(board)==true || draw?(board)==true
     true
   else
     false
