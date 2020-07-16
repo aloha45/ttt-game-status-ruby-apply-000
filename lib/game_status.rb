@@ -17,7 +17,19 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect do |WIN_COMBINATION|
-    if 
+    if win_combination.all? do |win_index|
+        board[win_index]=="X"
+      end
+      true
+    elsif
+      win_combination.all? do |win_index|
+        board[win_index]=="O"
+      end
+      true
+    else
+      false
+    end
+  end
 
 def full?(board)
   board.all? do |index|
