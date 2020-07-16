@@ -42,6 +42,3 @@ def draw?(board)
     true
   end
 end
-
-def winner?
-end
