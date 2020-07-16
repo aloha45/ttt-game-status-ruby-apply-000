@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect |WIN_COMBINATION|
+  WIN_COMBINATIONS.detect do |WIN_COMBINATION|
 
 def full?(board)
   board.all? do |index|
