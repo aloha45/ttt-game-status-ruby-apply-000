@@ -42,7 +42,7 @@ def draw?(board)
     true
   else
     false
-  end
+end
 
 def winner(board)
   if won?(board)!=nil
@@ -50,3 +50,4 @@ def winner(board)
   else
     nil
   end
+end
