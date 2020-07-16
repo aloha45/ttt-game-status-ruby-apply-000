@@ -16,18 +16,18 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect do |WIN_COMBINATION|
+  WIN_COMBINATIONS.detect do |win_combination|
     if win_combination.all? do |win_index|
         board[win_index]=="X"
       end
-      true
+      return true
     elsif
       win_combination.all? do |win_index|
         board[win_index]=="O"
       end
-      true
+      return true
     else
-      false
+      return false
     end
   end
 
